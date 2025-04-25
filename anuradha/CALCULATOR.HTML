@@ -1,0 +1,72 @@
+<html>
+<head>
+<style>
+h1{
+text-align:center;
+text-shadow:04px 03px 07px red;
+}
+input[type="button"]
+{
+width:100%;
+height:100%;
+background-image:linear-gradient(pink,cyan);"
+}
+
+</style>
+</head>
+<body style="margin:100px";>
+<h1><u>CALCULATOR</H1></u>
+<script>
+function msg(val)
+{
+document.getElementById("a").value +=val;
+}
+
+function clr()
+{
+document.getElementById("a").value ="";
+}
+
+function slove()
+{
+ var x=document.getElementById("a").value;
+ var y=eval(x);
+ document.getElementById("a").value=y;
+}
+</script>
+<center><table>
+<tr>
+<th colspan="3"><input type="text" id="a">
+<th><input type="button" value="C" onclick="clr()">
+</tr>
+<tr>
+<th><input type="button" value="1" onclick="msg(1)">
+<th><input type="button" value="2" onclick="msg(2)">
+<th><input type="button" value="3" onclick="msg(3)">
+<th><input type="button" value="/" onclick="msg('/')">
+</tr>
+
+<tr>
+<th><input type="button" value="4" onclick="msg(4)">
+<th><input type="button" value="5" onclick="msg(5)">
+<th><input type="button" value="6" onclick="msg(6)">
+<th><input type="button" value="*" onclick="msg('*')">
+</tr>
+
+<tr>
+<th><input type="button" value="7" onclick="msg(7)">
+<th><input type="button" value="8" onclick="msg(8)">
+<th><input type="button" value="9" onclick="msg(9)">
+<th><input type="button" value="-" onclick="msg('-')">
+</tr>
+
+<tr>
+<th><input type="button" value="." onclick="msg('.')">
+<th><input type="button" value="0" onclick="msg('0')">
+<th><input type="button" value="=" onclick="slove()">
+<th><input type="button" value="+" onclick="msg('+')">
+</tr>
+
+</table></center>
+</body>
+</html>
