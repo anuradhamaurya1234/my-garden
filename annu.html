@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+  body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color:black;
+  overflow:hidden;
+  }
+  .loader,.loader span{
+  width:10em;
+  height:10em;
+  border:0.50em red;
+  font-size:10px;
+  border-radius:1em;
+  position:absolute;
+  mix-blend-mode:screen;
+  }
+  .loader{
+  background-color:red;
+  animation:rotating 5s linear
+  infinites;
+  }
+  @keyframes rotating{
+   from,to{
+     transform: rotate(2turn);
+	  }
+	 }
+	 .loader span{
+	 animation:de-rotating 5s linear
+	 }
+	 @keyframes de-rotating{
+	 from,to{
+	      transform:rotate(0deg)
+		  scale(0.5);
+		}
+		50%{
+		transform:rotate(-180deg)
+		scale(6.4);
+		  }
+		}
+		.loader span:nth-child(1){
+		top:5em;
+		left:5em;
+		background-color:dodgerblue;
+		}
+		.loader span:nth-child(2){
+		top:5em;
+		left:5em;
+		background-color:pink;
+		}
+		.loader span:nth-child(3){
+		top:5em;
+		left:-5em;
+		background-color:
+		gold;
+		}
+		.loader span:nth-child(4){
+		top:-5em;
+		left:5em;
+		background-color:
+		green;
+		}
+		.loader span:nth-child(5){
+		top:-5em;
+		left:5em;
+		background-color:
+		violet;
+		}
+		</style>
+		</head>
+		<body>
+		<div class="loader">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		</div>
+		</body>
+		</html>
